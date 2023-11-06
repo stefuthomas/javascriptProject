@@ -8,5 +8,5 @@ do {
     numberList.push(number);
 } while (number != 0);
 
-numberList.reverse();
+numberList.sort((a, b) => b - a);
 console.log(numberList);
