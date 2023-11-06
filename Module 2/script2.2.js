@@ -3,16 +3,12 @@
 let participants, name, participantList
 participants = parseInt(prompt("How many participants:"))
 participantList = []
-for (let i = 0; i < participants-1; i++) {
+for (let i = 0; i < participants; i++) {
   name = prompt(`Name of the participant:`);
   participantList.push(name);
 }
 participantList.sort();
 const participantListDiv = document.getElementById("target");
-participantListDiv.innerHTML = "<h2>participant Names</h2><ol>";
-
-for (let i = 0; i<=participantList.length; i++) {
-  participantListDiv.innerHTML += "<li>" + participants[i] + "</li>";
+for (let i = 0; i<participantList.length; i++) {
+  participantListDiv.innerHTML += "<li>" + participantList[i] + "</li>";
 }
-
-participantListDiv.innerHTML += "</ol>";
