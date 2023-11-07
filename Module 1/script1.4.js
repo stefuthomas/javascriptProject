@@ -1,8 +1,8 @@
 'use strict';
 
-let name, number
-name = prompt("Hello. What is your name:")
-number = Math.floor(Math.random() * 4) + 1
+
+const name = prompt("Hello. What is your name:")
+const number = Math.floor(Math.random() * 4) + 1
 
 switch (number) {
   case 1:
