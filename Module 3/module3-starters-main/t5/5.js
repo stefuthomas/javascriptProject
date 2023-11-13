@@ -93,3 +93,6 @@ const picArray = [
 ];
 
 // add your code here
+for (let i = 0; i < picArray.length; i++) {
+
+}
