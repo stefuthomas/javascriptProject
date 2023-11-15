@@ -4,11 +4,12 @@ let countingNumbers = true;
 const numbers = [];
 while (countingNumbers) {
     let num = parseInt(prompt('Enter a number'));
-    numbers.push(num);
-    if (num in numbers) {
-        alert(`number ${num} has already been given`)
-        break
-    }
+       if (numbers.includes(num)) {
+        alert(`Number ${num} has already been given.`);
+        break;
+    } else {
+           numbers.push(num);
+       }
 }
 numbers.sort();
 console.log(numbers);
