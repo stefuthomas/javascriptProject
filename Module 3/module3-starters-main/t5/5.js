@@ -1,4 +1,5 @@
 'use strict';
+
 const picArray = [
   {
     title: 'Title 1',
@@ -92,26 +93,26 @@ const picArray = [
   },
 ];
 
-// add your code here
-const section = document.getElementById('pictures')
-for (let i = 0; i < picArray.length; i++) {
-  let article = document.createElement('article')
-  let heading = document.createElement('h2')
-  let figure = document.createElement('figure')
-  let img = document.createElement('img')
-  let figcaption = document.createElement('figcaption')
-  let p = document.createElement('p')
+const section = document.getElementById('pictures');
+for (let pic of picArray) {
+  let article = document.createElement("article");
+  let h2 = document.createElement("h2");
+  let figure = document.createElement("figure");
+  let img = document.createElement("img");
+  let figcaption = document.createElement("figcaption");
+  let paragraph = document.createElement("p");
 
-  article.className = 'card'
-  heading.innerHTML = picArray[i].title;
-  img.src = picArray[i].image.medium;
-  img.alt = picArray[i].title;
-  figure.innerHTML = picArray[i].caption;
-  p.innerHTML = picArray[i].description;
+  article.className = 'card';
+  h2.innerHTML = pic.title;
+  img.src = pic.image.medium;
+  img.alt = pic.title;
+  figcaption.innerHTML = pic.caption;
+  paragraph.innerHTML = pic.description;
 
-  section.appendChild(article);
-  article.appendChild(heading);article.appendChild(figure);
   figure.appendChild(img);
-  figure.appendChild(figcaption);
-  article.appendChild(p);
+  figure.appendChild(figcaption)
+  article.appendChild(h2);
+  article.appendChild(figure);
+  article.appendChild(paragraph);
+  section.appendChild(article);
 }
