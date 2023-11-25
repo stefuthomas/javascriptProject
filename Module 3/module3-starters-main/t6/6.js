@@ -1,7 +1,6 @@
-'use srict';
-const button = document.querySelector('button');
-function popup() {
-  alert('Button was clicked');
-}
+'use strict';
 
-button.onclick = popup;
+const button = document.querySelector("button");
+button.addEventListener('click', function (evt){
+    alert('Button was clicked!')
+})
